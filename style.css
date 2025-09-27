@@ -330,6 +330,68 @@ a:focus-visible {
   box-shadow: 0 8px 20px var(--color-shadow);
 }
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.skill-card {
+  padding: 28px 24px;
+  background: var(--color-surface);
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 16px 40px var(--color-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.skill-card:hover,
+.skill-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px var(--color-shadow);
+}
+
+.skill-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--color-primary) 18%, transparent);
+  font-size: 1.2rem;
+}
+
+.skill-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-items li {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -422,6 +484,11 @@ a:focus-visible {
   border-radius: 50%;
   background: var(--color-primary);
   box-shadow: 0 0 0 5px color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+
+.timeline-education .timeline-dot {
+  background: var(--color-accent);
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--color-accent) 30%, transparent);
 }
 
 .timeline-item h3 {
