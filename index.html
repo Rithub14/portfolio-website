@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rizwan Khan | ML/AI Engineer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header" id="home">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Go to top">
+          <span class="logo" aria-hidden="true">RK</span>
+          <span class="brand-name">Rizwan Khan</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span class="sun" aria-hidden="true">☀️</span>
+          <span class="moon" aria-hidden="true">🌙</span>
+        </button>
+      </nav>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content" data-animate="fade-in">
+          <p class="intro">Hello, I'm</p>
+          <h1 id="hero-title">Rizwan Khan</h1>
+          <p class="role">ML/AI Engineer</p>
+          <p class="tagline">I build machine learning systems that deliver measurable impact.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Work With Me</a>
+            <a class="btn btn-outline" href="assets/resume.pdf" download>Download Resume</a>
+          </div>
+        </div>
+        <div class="hero-visual" data-animate="slide-up" aria-hidden="true">
+          <div class="orbit"></div>
+          <div class="hero-avatar">RK</div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="about section" id="about">
+        <div class="section-heading" data-animate="fade-in">
+          <h2>About Me</h2>
+          <p>Who I am and what I do.</p>
+        </div>
+        <div class="about-content">
+          <div class="about-image" data-animate="slide-up">
+            <img src="assets/profile-placeholder.jpg" alt="Portrait of Rizwan Khan" />
+          </div>
+          <div class="about-text" data-animate="fade-in">
+            <p>
+              I'm a machine learning engineer with a passion for transforming data into actionable insights.
+              I specialize in deploying scalable ML solutions, MLOps practices, and cloud-native architectures.
+            </p>
+            <p>
+              My approach blends rigorous experimentation with production-grade engineering so products maintain
+              reliability and performance at scale.
+            </p>
+            <div class="skills">
+              <h3>Core Skills</h3>
+              <ul>
+                <li>Python &amp; FastAPI</li>
+                <li>Machine Learning &amp; Deep Learning</li>
+                <li>MLOps &amp; CI/CD</li>
+                <li>Cloud Platforms (AWS, GCP)</li>
+                <li>Data Engineering</li>
+                <li>Model Monitoring</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects section" id="projects">
+        <div class="section-heading" data-animate="fade-in">
+          <h2>Projects</h2>
+          <p>Highlighted work demonstrating impact.</p>
+        </div>
+        <div class="projects-grid" id="projects-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="experience section" id="experience">
+        <div class="section-heading" data-animate="fade-in">
+          <h2>Experience</h2>
+          <p>Work history and education.</p>
+        </div>
+        <div class="timeline" id="timeline" aria-live="polite"></div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="section-heading" data-animate="fade-in">
+          <h2>Contact</h2>
+          <p>Let's build something together.</p>
+        </div>
+        <div class="contact-content">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+              <p class="error-message" aria-live="polite"></p>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+              <p class="error-message" aria-live="polite"></p>
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              <p class="error-message" aria-live="polite"></p>
+            </div>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+          <aside class="contact-details" data-animate="fade-in">
+            <h3>Stay Connected</h3>
+            <p>Feel free to reach out via email or connect on social platforms.</p>
+            <ul class="contact-links">
+              <li>
+                <a href="mailto:hello@rizwankhan.dev" aria-label="Email Rizwan">
+                  <span class="icon" aria-hidden="true">✉️</span>
+                  hello@rizwankhan.dev
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com" aria-label="LinkedIn profile">
+                  <span class="icon" aria-hidden="true">in</span>
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com" aria-label="GitHub profile">
+                  <span class="icon" aria-hidden="true">GH</span>
+                  GitHub
+                </a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; <span id="year"></span> Rizwan Khan. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <span aria-hidden="true">↑</span>
+    </button>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
