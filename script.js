@@ -1,70 +1,129 @@
-// Placeholder data for easy future updates
 const projects = [
   {
-    title: 'Predictive Maintenance Platform',
+    title: 'Retrieval-Augmented Generation Assistant',
     description:
-      'End-to-end ML pipeline predicting equipment failures using streaming telemetry and automated model retraining.',
-    techStack: ['Python', 'TensorFlow', 'FastAPI', 'Kafka'],
+      'Streamlit-powered RAG workflow that ingests documents and URLs, chunks content, stores embeddings in Pinecone, and answers questions with LangChain + GPT-3.5.',
+    techStack: ['LangChain', 'OpenAI', 'Pinecone', 'Streamlit'],
     links: {
-      github: 'https://github.com/yourusername/predictive-maintenance',
-      demo: 'https://example.com/predictive-maintenance'
+      github: 'https://github.com/rizwanaslam',
+      demo: 'https://rizwanaslam.dev'
     }
   },
   {
-    title: 'Retail Demand Forecasting',
+    title: 'Comic AI',
     description:
-      'Demand forecasting system with feature store integration and interactive analytics dashboards for merchandisers.',
-    techStack: ['PyTorch', 'AWS', 'dbt', 'React'],
+      'AI comic strip generator that translates user scenarios into six-panel stories using OpenAI for narrative text and Stable Diffusion for visual styling.',
+    techStack: ['OpenAI', 'Stable Diffusion', 'Streamlit'],
     links: {
-      github: 'https://github.com/yourusername/retail-forecasting',
-      demo: 'https://example.com/retail-forecasting'
+      github: 'https://github.com/rizwanaslam',
+      demo: 'https://rizwanaslam.dev'
     }
   },
   {
-    title: 'Document Intelligence Assistant',
+    title: 'Mango Variety Identification',
     description:
-      'LLM-powered assistant extracting structured insights from unstructured documents with human-in-the-loop review.',
-    techStack: ['LangChain', 'OpenAI API', 'PostgreSQL', 'Docker'],
+      'Custom deep learning pipeline leveraging YOLOv5/YOLOv7/Detectron2 to classify mango varieties from UAV imagery with a Streamlit interface for exploration.',
+    techStack: ['PyTorch', 'YOLOv5', 'YOLOv7', 'Detectron2', 'Streamlit'],
     links: {
-      github: 'https://github.com/yourusername/document-intelligence',
-      demo: 'https://example.com/document-intelligence'
+      github: 'https://github.com/rizwanaslam',
+      demo: 'https://rizwanaslam.dev'
     }
   }
 ];
 
-const experience = [
+const experiences = [
   {
-    title: 'Senior ML Engineer',
-    organization: 'Nimbus Analytics',
-    location: 'Remote',
-    period: '2022 — Present',
+    title: 'MSc Artificial Intelligence',
+    organization: 'Brandenburg University of Technology (BTU Cottbus)',
+    location: 'Cottbus, Germany',
+    period: '2023 — 2025 (Expected)',
+    type: 'education',
+    achievements: ['Pursuing advanced coursework in artificial intelligence and generative AI', 'Expected graduation in 2025']
+  },
+  {
+    title: 'Data Science Intern',
+    organization: 'Machine Learning 1',
+    location: 'Lahore, Pakistan',
+    period: 'May 2023 — Jul 2023',
+    type: 'experience',
     achievements: [
-      'Led deployment of real-time ML pipeline serving 5M daily predictions with 99.9% uptime',
-      'Introduced observability stack reducing mean time to resolution by 40%'
+      'Engineered an automated text extraction system processing 1K+ multi-format documents for 30 resume templates',
+      'Annotated computer vision datasets with LabelImg to improve object detection model training'
     ]
   },
   {
-    title: 'Machine Learning Engineer',
-    organization: 'Skyline Labs',
-    location: 'San Francisco, CA',
-    period: '2019 — 2022',
+    title: 'BSc Computer Science',
+    organization: 'COMSATS University Islamabad',
+    location: 'Lahore, Pakistan',
+    period: '2019 — 2023',
+    type: 'education',
+    achievements: ['Completed Computer Science degree with emphasis on machine learning fundamentals']
+  },
+  {
+    title: 'Software Developer Intern',
+    organization: 'ABACUS Consulting',
+    location: 'Lahore, Pakistan',
+    period: 'May 2021 — Jul 2021',
+    type: 'experience',
     achievements: [
-      'Built automated experimentation platform accelerating model iteration cycles by 3x',
-      'Collaborated with product to launch personalization engine driving 18% retention lift'
+      'Built Spring Boot service to generate and read secure QR codes for streamlined transactions',
+      'Led testing and debugging cycles to harden the QR code workflow before launch'
+    ]
+  }
+];
+
+const skillGroups = [
+  {
+    title: 'Programming Languages',
+    icon: '💻',
+    items: ['Python', 'SQL', 'Java']
+  },
+  {
+    title: 'Libraries &amp; Frameworks',
+    icon: '🧰',
+    items: [
+      'NumPy',
+      'Pandas',
+      'Matplotlib',
+      'Scikit-learn',
+      'OpenCV',
+      'PyTorch',
+      'HuggingFace',
+      'LangChain',
+      'Streamlit',
+      'Spring Boot'
     ]
   },
   {
-    title: 'M.S. in Computer Science',
-    organization: 'Stanford University',
-    location: 'Stanford, CA',
-    period: '2017 — 2019',
-    achievements: ['Specialization in AI Systems', 'Graduate researcher in NLP lab']
+    title: 'Tools',
+    icon: '🛠️',
+    items: ['Git', 'Docker', 'VS Code', 'Jupyter Notebook', 'Google Colab']
+  },
+  {
+    title: 'Cloud Platforms',
+    icon: '☁️',
+    items: ['AWS SageMaker', 'AWS Bedrock']
+  },
+  {
+    title: 'Soft Skills',
+    icon: '🤝',
+    items: ['Time management', 'Problem-solving', 'Critical thinking', 'Collaboration']
+  },
+  {
+    title: 'Certifications',
+    icon: '🎓',
+    items: [
+      'Machine Learning Specialization — DeepLearning.AI',
+      'Deep Learning Specialization — DeepLearning.AI',
+      'Python for Data Science &amp; ML Bootcamp — Udemy'
+    ]
   }
 ];
 
 const selectors = {
   projectsGrid: document.getElementById('projects-grid'),
   timeline: document.getElementById('timeline'),
+  skillsGrid: document.getElementById('skills-grid'),
   navToggle: document.querySelector('.nav-toggle'),
   navLinks: document.querySelector('.nav-links'),
   themeToggle: document.querySelector('.theme-toggle'),
@@ -100,13 +159,14 @@ function renderProjects() {
   selectors.projectsGrid.appendChild(fragment);
 }
 
-function renderTimeline() {
+function renderExperienceTimeline() {
   if (!selectors.timeline) return;
 
   const fragment = document.createDocumentFragment();
-  experience.forEach((item) => {
+  experiences.forEach((item) => {
     const wrapper = document.createElement('article');
-    wrapper.className = 'timeline-item';
+    const typeClass = item.type ? ` timeline-${item.type}` : '';
+    wrapper.className = `timeline-item${typeClass}`.trim();
     wrapper.setAttribute('data-animate', 'slide-up');
 
     const achievementsList = item.achievements
@@ -128,6 +188,28 @@ function renderTimeline() {
   });
 
   selectors.timeline.appendChild(fragment);
+}
+
+function renderSkillsMatrix() {
+  if (!selectors.skillsGrid) return;
+
+  const fragment = document.createDocumentFragment();
+  skillGroups.forEach((group) => {
+    const card = document.createElement('article');
+    card.className = 'skill-card';
+    card.setAttribute('data-animate', 'fade-in');
+
+    card.innerHTML = `
+      <h3><span class="skill-icon" aria-hidden="true">${group.icon}</span>${group.title}</h3>
+      <ul class="skill-items">
+        ${group.items.map((item) => `<li>${item}</li>`).join('')}
+      </ul>
+    `;
+
+    fragment.appendChild(card);
+  });
+
+  selectors.skillsGrid.appendChild(fragment);
 }
 
 function initNavigation() {
@@ -205,7 +287,6 @@ function initThemeToggle() {
   });
 
   prefersDark.addEventListener('change', (event) => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
     if (!localStorage.getItem('theme')) {
       document.documentElement.setAttribute('data-theme', event.matches ? 'dark' : 'light');
     }
@@ -299,7 +380,8 @@ function initSmoothScroll() {
 
 function initApp() {
   renderProjects();
-  renderTimeline();
+  renderExperienceTimeline();
+  renderSkillsMatrix();
   initNavigation();
   initScrollAnimations();
   initBackToTop();
