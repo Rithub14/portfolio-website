@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muhammad Rizwan Aslam | ML Engineer</title>
+    <title>Rizwan Aslam</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,13 +11,16 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      defer
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    ></script>
   </head>
   <body>
     <header class="site-header" id="home">
       <nav class="navbar" aria-label="Main navigation">
         <a class="brand" href="#home" aria-label="Go to top">
           <span class="logo" aria-hidden="true">RA</span>
-          <span class="brand-name">Muhammad Rizwan Aslam</span>
         </a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
           <span class="sr-only">Toggle navigation</span>
@@ -40,18 +43,52 @@
       </nav>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content" data-animate="fade-in">
-          <p class="intro">Hello, I'm</p>
-          <h1 id="hero-title">Muhammad Rizwan Aslam</h1>
-          <p class="role">ML Engineer · Generative AI Specialist</p>
+          <p class="intro">Hi, I'm</p>
+          <h1 id="hero-title">Rizwan Aslam</h1>
+          <p class="role">AI / ML Engineer · Data Scientist</p>
           <p class="tagline">I design and deploy AI systems that solve complex business challenges.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Work With Me</a>
-            <a class="btn btn-outline" href="assets/resume.pdf" download>Download Resume</a>
+            <a class="btn btn-primary" href="#contact">Contact</a>
+            <a class="btn btn-outline" href="assets/Muhammad_Rizwan_Aslam_Resume.pdf" download
+              >Resume</a
+            >
+          </div>
+          <div class="hero-social" aria-label="Quick contact links">
+            <a
+              class="hero-social-link"
+              href="mailto:rizwanaslam.work@gmail.com"
+              aria-label="Email Muhammad Rizwan Aslam"
+            >
+              <img class="icon-light" src="assets/gmail-1.png" alt="Gmail" />
+              <img class="icon-dark" src="assets/gmail-2.png" alt="" aria-hidden="true" />
+            </a>
+            <a
+              class="hero-social-link"
+              href="https://www.linkedin.com/in/rizwan-aslam-cs/"
+              aria-label="LinkedIn profile"
+              target="_blank"
+              rel="noopener"
+            >
+              <img class="icon-light" src="assets/linkedin-1.png" alt="LinkedIn" />
+              <img class="icon-dark" src="assets/linkedin-2.png" alt="" aria-hidden="true" />
+            </a>
+            <a
+              class="hero-social-link"
+              href="https://github.com/Rithub14"
+              aria-label="GitHub profile"
+              target="_blank"
+              rel="noopener"
+            >
+              <img class="icon-light" src="assets/github-1.png" alt="GitHub" />
+              <img class="icon-dark" src="assets/github-2.png" alt="" aria-hidden="true" />
+            </a>
           </div>
         </div>
         <div class="hero-visual" data-animate="slide-up" aria-hidden="true">
           <div class="orbit"></div>
-          <div class="hero-avatar">RA</div>
+          <div class="hero-avatar">
+            <img src="assets/pic.png" alt="Portrait of Muhammad Rizwan Aslam" />
+          </div>
         </div>
       </section>
     </header>
@@ -64,7 +101,19 @@
         </div>
         <div class="about-content">
           <div class="about-image" data-animate="slide-up">
-            <img src="assets/profile-placeholder.jpg" alt="Portrait of Muhammad Rizwan Aslam" />
+            <div class="about-animation">
+              <lottie-player
+                src="assets/animation.json"
+                background="#ffffff"
+                speed="1"
+                loop
+                autoplay
+                aria-label="Portrait animation of Muhammad Rizwan Aslam"
+              ></lottie-player>
+            </div>
+            <noscript>
+              <img src="assets/pic.png" alt="Portrait of Muhammad Rizwan Aslam" />
+            </noscript>
           </div>
           <div class="about-text" data-animate="fade-in">
             <p>
@@ -75,16 +124,8 @@
               From rapid prototyping to scalable deployment, I combine strong software fundamentals with a
               collaborative mindset to ship reliable, measurable outcomes.
             </p>
-            <div class="skills">
-              <h3>Snapshot</h3>
-              <ul>
-                <li>Generative AI &amp; LLM Apps</li>
-                <li>Retrieval-Augmented Generation</li>
-                <li>Computer Vision</li>
-                <li>AWS SageMaker &amp; Bedrock</li>
-                <li>Streamlined ML Ops &amp; Delivery</li>
-                <li>Time Management &amp; Collaboration</li>
-              </ul>
+            <div class="about-cta">
+              <a class="btn btn-outline" href="#contact">Leave a Message</a>
             </div>
           </div>
         </div>
@@ -95,6 +136,26 @@
           <h2>Experience</h2>
           <p>Professional and academic milestones shaping my ML journey.</p>
         </div>
+        <div class="experience-controls" role="group" aria-label="Experience type">
+          <button
+            class="experience-toggle active"
+            type="button"
+            data-experience-filter="professional"
+            aria-pressed="true"
+          >
+            <span class="toggle-icon" aria-hidden="true">💼</span>
+            Professional
+          </button>
+          <button
+            class="experience-toggle"
+            type="button"
+            data-experience-filter="academic"
+            aria-pressed="false"
+          >
+            <span class="toggle-icon" aria-hidden="true">🎓</span>
+            Academic
+          </button>
+        </div>
         <div class="timeline" id="timeline" aria-live="polite"></div>
       </section>
 
@@ -103,7 +164,27 @@
           <h2>Skills Matrix</h2>
           <p>Tooling and strengths I rely on to ship ML products.</p>
         </div>
-        <div class="skills-grid" id="skills-grid" aria-live="polite"></div>
+        <div class="skills-carousel" data-animate="fade-in">
+          <button
+            class="skills-nav-btn"
+            type="button"
+            aria-label="Previous skill group"
+            data-skill-nav="prev"
+          >
+            ‹
+          </button>
+          <div class="skills-viewport">
+            <div class="skills-grid" id="skills-grid" aria-live="polite"></div>
+          </div>
+          <button
+            class="skills-nav-btn"
+            type="button"
+            aria-label="Next skill group"
+            data-skill-nav="next"
+          >
+            ›
+          </button>
+        </div>
       </section>
 
       <section class="projects section" id="projects">
@@ -120,57 +201,35 @@
           <p>Let's build something together.</p>
         </div>
         <div class="contact-content">
-          <form class="contact-form" id="contact-form" novalidate>
-            <div class="form-field">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Jane Doe" required />
-              <p class="error-message" aria-live="polite"></p>
-            </div>
-            <div class="form-field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
-              <p class="error-message" aria-live="polite"></p>
-            </div>
-            <div class="form-field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-              <p class="error-message" aria-live="polite"></p>
-            </div>
-            <button class="btn btn-primary" type="submit">Send Message</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
-          </form>
           <aside class="contact-details" data-animate="fade-in">
             <h3>Stay Connected</h3>
-            <p>Feel free to reach out via email or connect on social platforms.</p>
+            <p>Feel free to reach out via email or connect on LinkedIn or GitHub.</p>
             <ul class="contact-links">
               <li>
-                <a href="tel:+4917643864629" aria-label="Call Muhammad Rizwan Aslam">
-                  <span class="icon" aria-hidden="true">📞</span>
-                  +49 176 43864629
-                </a>
-              </li>
-              <li>
                 <a href="mailto:rizwanaslam.work@gmail.com" aria-label="Email Muhammad Rizwan Aslam">
-                  <span class="icon" aria-hidden="true">✉️</span>
-                  rizwanaslam.work@gmail.com
+                  <span class="icon" aria-hidden="true">
+                    <img class="icon-light" src="assets/gmail-1.png" alt="" />
+                    <img class="icon-dark" src="assets/gmail-2.png" alt="" aria-hidden="true" />
+                  </span>
+                  Email
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/rizwanaslam" aria-label="LinkedIn profile">
-                  <span class="icon" aria-hidden="true">in</span>
+                <a href="https://www.linkedin.com/in/rizwan-aslam-cs/" aria-label="LinkedIn profile">
+                  <span class="icon" aria-hidden="true">
+                    <img class="icon-light" src="assets/linkedin-1.png" alt="" />
+                    <img class="icon-dark" src="assets/linkedin-2.png" alt="" aria-hidden="true" />
+                  </span>
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a href="https://github.com/rizwanaslam" aria-label="GitHub profile">
-                  <span class="icon" aria-hidden="true">GH</span>
+                <a href="https://github.com/Rithub14" aria-label="GitHub profile">
+                  <span class="icon" aria-hidden="true">
+                    <img class="icon-light" src="assets/github-1.png" alt="" />
+                    <img class="icon-dark" src="assets/github-2.png" alt="" aria-hidden="true" />
+                  </span>
                   GitHub
-                </a>
-              </li>
-              <li>
-                <a href="https://rizwanaslam.dev" aria-label="Portfolio website">
-                  <span class="icon" aria-hidden="true">🌐</span>
-                  Portfolio
                 </a>
               </li>
             </ul>
@@ -181,12 +240,7 @@
 
     <footer class="site-footer">
       <div class="footer-content">
-        <p>&copy; <span id="year"></span> Muhammad Rizwan Aslam. All rights reserved.</p>
-        <ul class="footer-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <p>&copy; <span id="year"></span> Rizwan Aslam. All rights reserved.</p>
       </div>
     </footer>
 
