@@ -65,21 +65,16 @@ export function HeroSection() {
             ))}
           </div>
         </motion.div>
-        <motion.div
-          variants={containerVariants}
-          className="relative mx-auto flex h-full w-full max-w-xs justify-center lg:max-w-sm"
-        >
-          <div className="relative overflow-hidden rounded-3xl border border-transparent bg-background/10 p-3 shadow-xl backdrop-blur">
-            <Image
-              src="/assets/pic.png"
-              alt="Muhammad Rizwan Aslam"
-              width={360}
-              height={420}
-              className="h-auto w-full rounded-2xl object-cover"
-              priority
-            />
-            <div className="pointer-events-none absolute inset-0 rounded-2xl border border-transparent" />
-          </div>
+        <motion.div variants={containerVariants} className="relative mx-auto flex justify-center">
+          <Image
+            src="/assets/pic.png"
+            alt="Muhammad Rizwan Aslam"
+            width={180}
+            height={180}
+            className="rounded-full object-cover"
+            style={{ width: "15rem", height: "15rem" }}
+            priority
+          />
         </motion.div>
       </motion.div>
     </section>
