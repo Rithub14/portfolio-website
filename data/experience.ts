@@ -18,30 +18,30 @@ export const experiences: ExperienceItem[] = [
   },
   {
     type: "professional",
-    role: "Machine Learning Consultant",
+    role: "Machine Learning Engineer",
     organization: "Freelance",
-    duration: "Jan 2023 – Sep 2024",
+    duration: "Aug 2023 – Sep 2024",
     description: "Delivered end-to-end ML prototypes and MLOps pipelines for SMEs modernizing data-driven products."
   },
   {
     type: "professional",
-    role: "Data Scientist",
-    organization: "Tech Startup",
-    duration: "Aug 2021 – Dec 2022",
+    role: "Data Scientist Intern",
+    organization: "Machine Learning 1",
+    duration: "May 2023 – Jul 2023",
     description: "Scaled predictive analytics dashboards and optimized experimentation frameworks for growth teams."
   },
   {
     type: "academic",
-    role: "M.Sc. Computer Science",
-    organization: "Technical University of Munich",
-    duration: "2022 – 2024",
+    role: "M.Sc. Artificial Intelligence",
+    organization: "Brandenburg University of Technology (BTU Cottbus)",
+    duration: "2023 – 2026",
     description: "Specialized in AI, human-centered computing, and autonomous systems with applied research in LLM alignment."
   },
   {
     type: "academic",
-    role: "B.Sc. Software Engineering",
-    organization: "National University of Sciences and Technology",
-    duration: "2018 – 2022",
+    role: "B.Sc. Computer Science",
+    organization: "COMSATS University Islamabad",
+    duration: "2019 – 2023",
     description: "Graduated with honors focusing on large-scale web architectures and machine learning applications."
   }
 ];
