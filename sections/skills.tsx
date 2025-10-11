@@ -2,15 +2,9 @@
 
 import { motion } from "framer-motion";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { certifications, skills } from "@/data/skills";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { skills } from "@/data/skills";
+import { CertificationsCarousel } from "@/sections/CertificationsCarousel";
 
 export function SkillsSection() {
   return (
@@ -59,41 +53,7 @@ export function SkillsSection() {
           </motion.div>
         ))}
       </div>
-      <div className="mt-12 grid gap-6 md:grid-cols-3">
-        {certifications.map((cert, index) => (
-          <motion.div
-            key={cert.name}
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.45, ease: "easeOut", delay: index * 0.08 }}
-          >
-            <Card className="h-full border-primary/20 hover:shadow-lg hover:shadow-blue-500/10">
-              <CardHeader>
-                <CardTitle className="text-xl leading-tight text-foreground">{cert.name}</CardTitle>
-                <CardDescription className="uppercase tracking-wide text-xs text-primary">
-                  {cert.provider}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex h-full flex-col justify-between gap-4 text-base text-muted-foreground">
-                <p>{cert.summary}</p>
-                {cert.link ? (
-                  <Button
-                    asChild
-                    variant="ghost"
-                    size="sm"
-                    className="justify-start px-0 text-primary hover:shadow-none"
-                  >
-                    <a href={cert.link} target="_blank" rel="noreferrer">
-                      Certificate
-                    </a>
-                  </Button>
-                ) : null}
-              </CardContent>
-            </Card>
-          </motion.div>
-        ))}
-      </div>
+      <CertificationsCarousel />
     </section>
   );
 }
