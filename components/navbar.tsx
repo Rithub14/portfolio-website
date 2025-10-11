@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -18,16 +18,6 @@ const navLinks = [
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 24);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -41,14 +31,9 @@ export function Navbar() {
   }, [menuOpen]);
 
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 backdrop-blur transition-all duration-300",
-        scrolled ? "border-b border-border/60 bg-background/90" : "bg-transparent"
-      )}
-    >
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-surface/80 backdrop-blur transition-colors">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="#home" className="text-xl font-semibold tracking-tight">
+        <Link href="#home" className="text-xl font-semibold tracking-tight text-foreground">
           Rizwan Aslam
         </Link>
         <div className="hidden items-center gap-8 md:flex">
@@ -63,6 +48,7 @@ export function Navbar() {
           ))}
         </div>
         <div className="flex items-center gap-3">
+          <ThemeToggle />
           <Button
             variant="outline"
             size="icon"
@@ -88,7 +74,7 @@ export function Navbar() {
                 <Button
                   key={link.href}
                   variant="ghost"
-                  className="justify-start text-lg"
+                  className="justify-start text-lg text-foreground hover:text-foreground"
                   onClick={() => setMenuOpen(false)}
                   asChild
                 >

@@ -15,6 +15,8 @@ const config: Config = {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        surface: "hsl(var(--surface))",
+        "surface-foreground": "hsl(var(--surface-foreground))",
         muted: "hsl(var(--muted))",
         "muted-foreground": "hsl(var(--muted-foreground))",
         accent: "hsl(var(--accent))",
@@ -37,8 +39,10 @@ const config: Config = {
         sans: ["Inter", "system-ui", "sans-serif"]
       },
       backgroundImage: {
-        'hero-gradient':
-          'radial-gradient(circle at top, rgba(28,38,59,0.65), transparent 55%), linear-gradient(135deg, rgba(17,23,41,0.9), rgba(10,12,20,0.9))'
+        'accent-gradient': 'linear-gradient(90deg, rgba(59,130,246,1) 0%, rgba(6,182,212,1) 100%)'
+      },
+      boxShadow: {
+        glow: "0 0 15px rgba(59,130,246,0.6)"
       }
     }
   },

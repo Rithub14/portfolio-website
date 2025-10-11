@@ -3,21 +3,51 @@
 @tailwind utilities;
 
 :root {
-  --background: 226 50% 6%;
-  --foreground: 226 20% 96%;
-  --muted: 226 28% 12%;
-  --muted-foreground: 226 15% 66%;
-  --accent: 222 45% 22%;
-  --accent-foreground: 226 20% 96%;
-  --border: 226 32% 28%;
-  --input: 226 32% 28%;
-  --ring: 226 75% 70%;
-  --card: 226 45% 8%;
-  --card-foreground: 226 20% 96%;
-  --primary: 226 85% 65%;
-  --primary-foreground: 226 30% 8%;
-  --secondary: 222 45% 18%;
-  --secondary-foreground: 226 20% 94%;
+  color-scheme: light;
+  --background: 210 40% 98%; /* slate-50 */
+  --foreground: 222 47% 12%; /* slate-900 */
+  --surface: 213 31% 88%; /* slate-200 */
+  --surface-foreground: 222 47% 12%;
+  --muted: 213 27% 92%;
+  --muted-foreground: 218 18% 35%;
+  --accent: 189 82% 44%; /* cyan-600 */
+  --accent-foreground: 210 40% 98%;
+  --border: 213 24% 82%;
+  --input: 213 24% 82%;
+  --ring: 217 91% 60%;
+  --card: 213 31% 88%;
+  --card-foreground: 222 47% 12%;
+  --primary: 217 86% 57%; /* blue-600 */
+  --primary-foreground: 210 40% 98%;
+  --secondary: 213 36% 90%;
+  --secondary-foreground: 222 47% 12%;
+  --page-background: hsl(var(--background));
+  --hero-surface: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(6, 182, 212, 0.12), rgba(15, 23, 42, 0));
+  --glow-opacity: 0.1;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: 222 47% 12%; /* slate-900 */
+  --foreground: 210 40% 98%; /* slate-50 */
+  --surface: 215 28% 21%; /* slate-800 */
+  --surface-foreground: 210 40% 98%;
+  --muted: 218 22% 20%;
+  --muted-foreground: 214 30% 72%;
+  --accent: 189 82% 44%;
+  --accent-foreground: 210 40% 98%;
+  --border: 217 28% 32%;
+  --input: 217 28% 32%;
+  --ring: 217 91% 60%;
+  --card: 215 28% 21%;
+  --card-foreground: 210 40% 98%;
+  --primary: 217 91% 60%; /* blue-500 */
+  --primary-foreground: 210 40% 98%;
+  --secondary: 215 26% 25%;
+  --secondary-foreground: 210 40% 98%;
+  --page-background: hsl(var(--background));
+  --hero-surface: linear-gradient(135deg, rgba(59, 130, 246, 0.18), rgba(6, 182, 212, 0.18), rgba(15, 23, 42, 0));
+  --glow-opacity: 0.35;
 }
 
 html {
@@ -25,24 +55,10 @@ html {
 }
 
 body {
-  background: radial-gradient(circle at top left, rgba(94, 108, 246, 0.15), transparent 45%),
-    radial-gradient(circle at top right, rgba(14, 27, 62, 0.45), transparent 55%),
-    hsl(var(--background));
+  background: var(--page-background);
   color: hsl(var(--foreground));
   font-family: theme("fontFamily.sans");
   min-height: 100vh;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: -25% -35% auto;
-  height: 60vh;
-  background: radial-gradient(circle, rgba(94, 108, 246, 0.22), transparent 60%);
-  filter: blur(60px);
-  opacity: 0.4;
-  pointer-events: none;
-  z-index: -1;
 }
 
 @layer base {
@@ -50,7 +66,14 @@ body::before {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300 ease-in-out;
+  }
+}
+
+@layer components {
+  .hero-surface {
+    background: var(--hero-surface);
+    transition: background 0.3s ease;
   }
 }
 

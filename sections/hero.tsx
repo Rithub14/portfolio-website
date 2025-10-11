@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
@@ -13,23 +14,25 @@ const containerVariants = {
 };
 
 export function HeroSection() {
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
+
   return (
     <section
       id="home"
-      className="relative isolate overflow-hidden px-6 pb-16 pt-24"
+      className="relative isolate overflow-hidden bg-gradient-to-br from-primary/10 via-accent/10 to-transparent px-6 pb-20 pt-32 dark:from-primary/20 dark:via-accent/10"
     >
-      <div className="absolute inset-0 -z-10 bg-hero-gradient" />
       <motion.div
         initial="hidden"
         animate="visible"
         transition={{ staggerChildren: 0.2, delayChildren: 0.1 }}
-        className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,320px)]"
+        className="mx-auto grid w-full max-w-6xl items-center gap-12 text-foreground lg:grid-cols-[minmax(0,1fr)_minmax(0,320px)]"
       >
         <motion.div variants={containerVariants} className="flex flex-col items-start text-left">
-          <p className="rounded-full border border-border/40 px-4 py-1 text-sm uppercase tracking-[0.3em] text-primary/80">
+          <p className="rounded-full border border-border/60 bg-surface/60 px-4 py-1 text-sm uppercase tracking-[0.3em] text-foreground/80 shadow-sm">
             Rizwan Aslam
           </p>
-          <h1 className="mt-6 text-5xl font-semibold leading-tight tracking-tight sm:text-6xl">
+          <h1 className="mt-6 text-5xl font-semibold leading-tight tracking-tight text-foreground sm:text-6xl">
             AI Engineer crafting human-centered intelligent products.
           </h1>
           <p className="mt-5 text-lg text-muted-foreground sm:text-xl">
@@ -52,14 +55,14 @@ export function HeroSection() {
                 href={social.href}
                 target={social.href.startsWith("http") ? "_blank" : undefined}
                 rel={social.href.startsWith("http") ? "noreferrer" : undefined}
-                className="transition-transform duration-200 hover:-translate-y-1 hover:opacity-90"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-border/60 bg-surface/70 transition-transform duration-200 hover:-translate-y-1 hover:shadow-glow"
               >
                 <Image
-                  src={social.icon.dark}
+                  src={isDark ? social.icon.dark : social.icon.light}
                   alt={social.icon.alt}
-                  width={36}
-                  height={36}
-                  className="h-9 w-9"
+                  width={28}
+                  height={28}
+                  className="h-7 w-7"
                 />
               </Link>
             ))}

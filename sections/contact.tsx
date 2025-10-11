@@ -2,13 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 
 import { socialLinks } from "@/data/socials";
 
 export function ContactSection() {
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
+
   return (
-    <section id="contact" className="relative mx-auto max-w-3xl px-6 py-16 text-center">
+    <section id="contact" className="relative mx-auto max-w-3xl px-6 py-16 text-center text-foreground">
       <motion.h2
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -38,11 +42,17 @@ export function ContactSection() {
           <Link
             key={link.name}
             href={link.href}
-            className="flex items-center gap-3 rounded-full border border-border/60 bg-background/70 px-5 py-2.5 shadow-sm transition-colors hover:border-primary/60 hover:text-primary"
+            className="flex items-center gap-3 rounded-full border border-border/60 bg-surface/90 px-5 py-2.5 shadow-sm transition-all hover:-translate-y-1 hover:border-primary/60 hover:shadow-glow"
             target={link.href.startsWith("http") ? "_blank" : undefined}
             rel={link.href.startsWith("http") ? "noreferrer" : undefined}
           >
-            <Image src={link.icon.dark} alt={link.icon.alt} width={30} height={30} className="h-8 w-8" />
+            <Image
+              src={isDark ? link.icon.dark : link.icon.light}
+              alt={link.icon.alt}
+              width={30}
+              height={30}
+              className="h-8 w-8"
+            />
             <span className="text-base font-medium">{link.name}</span>
           </Link>
         ))}

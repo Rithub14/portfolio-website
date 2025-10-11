@@ -20,7 +20,7 @@ export function ExperienceSection() {
   );
 
   return (
-    <section id="experience" className="relative mx-auto max-w-5xl px-6 py-16">
+    <section id="experience" className="relative mx-auto max-w-5xl px-6 py-16 text-foreground">
       <div className="mb-10 flex flex-col items-center gap-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
@@ -40,7 +40,7 @@ export function ExperienceSection() {
         >
           A snapshot of the roles and research chapters that shaped my approach to intelligent products.
         </motion.p>
-        <div className="inline-flex rounded-full border border-border/60 bg-background/80 p-1 shadow-sm backdrop-blur">
+        <div className="inline-flex rounded-full border border-border/50 bg-surface/80 p-1 shadow-sm backdrop-blur transition-colors">
           {tabs.map((tab) => {
             const active = tab.value === activeTab;
             return (
@@ -67,14 +67,14 @@ export function ExperienceSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.45, ease: "easeOut", delay: index * 0.08 }}
-              className="relative ml-12 rounded-2xl border border-border/40 bg-card/70 p-6 shadow-lg backdrop-blur"
+              className="relative ml-12 rounded-2xl border border-border/50 bg-surface/90 p-6 shadow-sm transition-all hover:shadow-lg hover:shadow-blue-500/10"
             >
-              <span className="absolute -left-12 top-6 flex h-10 w-10 items-center justify-center rounded-full border border-border/60 bg-background/90 text-sm font-semibold shadow-sm">
+              <span className="absolute -left-12 top-6 flex h-10 w-10 items-center justify-center rounded-full border border-border/60 bg-background text-sm font-semibold text-foreground shadow-sm">
                 {index + 1}
               </span>
               <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <h3 className="text-xl font-semibold">{item.role}</h3>
+                  <h3 className="text-xl font-semibold text-foreground">{item.role}</h3>
                   <p className="text-sm uppercase tracking-wide text-primary">{item.organization}</p>
                 </div>
                 <span className="text-sm text-muted-foreground">{item.duration}</span>

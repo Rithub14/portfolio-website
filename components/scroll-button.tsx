@@ -87,7 +87,7 @@ export function ScrollButton() {
           <Button
             size="icon"
             variant="outline"
-            className="h-12 w-12 rounded-full border-border/70 bg-background/80 shadow-lg backdrop-blur"
+            className="h-12 w-12 rounded-full border-border/60 bg-surface/90 shadow-lg backdrop-blur hover:shadow-glow"
             onClick={handleClick}
             aria-label={direction === "down" ? "Scroll to next section" : "Scroll to top"}
           >

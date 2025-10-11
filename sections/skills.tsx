@@ -14,7 +14,7 @@ import { certifications, skills } from "@/data/skills";
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="mx-auto max-w-6xl px-6 py-16">
+    <section id="skills" className="mx-auto max-w-6xl px-6 py-16 text-foreground">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -36,10 +36,10 @@ export function SkillsSection() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.45, ease: "easeOut", delay: index * 0.05 }}
           >
-            <Card className="h-full">
+            <Card className="h-full hover:shadow-lg hover:shadow-blue-500/10">
               <CardHeader>
-                <CardTitle className="text-xl">{skill.title}</CardTitle>
-                <CardDescription className="text-base text-muted-foreground/90">
+                <CardTitle className="text-xl text-foreground">{skill.title}</CardTitle>
+                <CardDescription className="text-base text-muted-foreground">
                   {skill.description}
                 </CardDescription>
               </CardHeader>
@@ -48,7 +48,7 @@ export function SkillsSection() {
                   {skill.tools.map((tool) => (
                     <span
                       key={tool}
-                      className="rounded-full border border-border/60 bg-background/70 px-3 py-1 text-xs uppercase tracking-wide"
+                      className="rounded-full border border-border/50 bg-background px-3 py-1 text-xs font-medium uppercase tracking-wide text-foreground/80"
                     >
                       {tool}
                     </span>
@@ -68,9 +68,9 @@ export function SkillsSection() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.45, ease: "easeOut", delay: index * 0.08 }}
           >
-            <Card className="h-full border-primary/20">
+            <Card className="h-full border-primary/20 hover:shadow-lg hover:shadow-blue-500/10">
               <CardHeader>
-                <CardTitle className="text-xl leading-tight">{cert.name}</CardTitle>
+                <CardTitle className="text-xl leading-tight text-foreground">{cert.name}</CardTitle>
                 <CardDescription className="uppercase tracking-wide text-xs text-primary">
                   {cert.provider}
                 </CardDescription>
@@ -78,7 +78,12 @@ export function SkillsSection() {
               <CardContent className="flex h-full flex-col justify-between gap-4 text-base text-muted-foreground">
                 <p>{cert.summary}</p>
                 {cert.link ? (
-                  <Button asChild variant="ghost" size="sm" className="justify-start px-0 text-primary">
+                  <Button
+                    asChild
+                    variant="ghost"
+                    size="sm"
+                    className="justify-start px-0 text-primary hover:shadow-none"
+                  >
                     <a href={cert.link} target="_blank" rel="noreferrer">
                       Certificate
                     </a>

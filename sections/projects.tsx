@@ -16,7 +16,7 @@ import { projects } from "@/data/projects";
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="mx-auto max-w-6xl px-6 py-16">
+    <section id="projects" className="mx-auto max-w-6xl px-6 py-16 text-foreground">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -39,10 +39,10 @@ export function ProjectsSection() {
             transition={{ duration: 0.45, ease: "easeOut", delay: index * 0.06 }}
             whileHover={{ y: -6 }}
           >
-            <Card className="h-full border-border/50">
+            <Card className="h-full border-border/50 hover:shadow-lg hover:shadow-blue-500/10">
               <CardHeader>
-                <CardTitle className="text-xl">{project.title}</CardTitle>
-                <CardDescription className="text-base text-muted-foreground/90">
+                <CardTitle className="text-xl text-foreground">{project.title}</CardTitle>
+                <CardDescription className="text-base text-muted-foreground">
                   {project.description}
                 </CardDescription>
               </CardHeader>
@@ -51,7 +51,7 @@ export function ProjectsSection() {
                   {project.tech.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-accent/70 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent-foreground"
+                      className="rounded-full bg-gradient-to-r from-primary/20 to-accent/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary"
                     >
                       {tag}
                     </span>
