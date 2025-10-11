@@ -28,27 +28,37 @@ export function HeroSection() {
         transition={{ staggerChildren: 0.2, delayChildren: 0.1 }}
         className="mx-auto grid w-full max-w-6xl items-center gap-12 text-foreground lg:grid-cols-[minmax(0,1fr)_minmax(0,320px)]"
       >
-        <motion.div variants={containerVariants} className="flex flex-col items-start text-left">
-          <p className="rounded-full border border-border/60 bg-surface/60 px-4 py-1 text-sm uppercase tracking-[0.3em] text-foreground/80 shadow-sm">
-            Rizwan Aslam
-          </p>
-          <h1 className="mt-6 text-5xl font-semibold leading-tight tracking-tight text-foreground sm:text-6xl">
-            AI Engineer crafting human-centered intelligent products.
-          </h1>
-          <p className="mt-5 text-lg text-muted-foreground sm:text-xl">
-            I design, build, and ship reliable GenAI experiences that blend deep learning rigor with delightful UX. Let&apos;s ship the next breakthrough together.
-          </p>
-          <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row">
+        <motion.div
+          variants={containerVariants}
+          className="flex flex-col items-start text-left"
+        >
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mt-6 text-5xl font-semibold leading-tight tracking-tight text-foreground sm:text-6xl"
+          >
+            AI Engineer — Building intelligent systems that learn and deliver impact.
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mt-5 text-lg leading-relaxed text-muted-foreground sm:text-xl"
+          >
+            I engineer scalable ML solutions that bridge deep learning research with real-world deployment.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-8 flex flex-wrap items-center gap-4"
+          >
             <Button asChild size="lg">
-              <Link href="#contact">Contact</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
               <a href="/assets/Muhammad_Rizwan_Aslam_Resume.pdf" download>
                 Resume
               </a>
             </Button>
-          </div>
-          <div className="mt-10 flex items-center gap-5">
             {socialLinks.map((social) => (
               <Link
                 key={social.name}
@@ -66,9 +76,15 @@ export function HeroSection() {
                 />
               </Link>
             ))}
-          </div>
+          </motion.div>
         </motion.div>
-        <motion.div variants={containerVariants} className="relative mx-auto flex justify-center">
+        <motion.div
+          variants={containerVariants}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="relative mx-auto flex justify-center"
+        >
           <Image
             src="/assets/pic.png"
             alt="Muhammad Rizwan Aslam"
