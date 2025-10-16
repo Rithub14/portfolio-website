@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Next.js build outputs
+.next/
+out/
+
+# Environment variables
+.env
+.env.local
+.env.*
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+
+# TypeScript build cache
+tsconfig.tsbuildinfo
+
+# Misc
+*.log
