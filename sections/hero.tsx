@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
@@ -14,9 +13,6 @@ const containerVariants = {
 };
 
 export function HeroSection() {
-  const { resolvedTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
-
   return (
     <section
       id="home"
@@ -55,7 +51,11 @@ export function HeroSection() {
             className="mt-8 flex flex-wrap items-center gap-4"
           >
             <Button asChild size="lg">
-              <a href="/assets/Muhammad_Rizwan_Aslam_Resume.pdf" download>
+              <a
+                href="https://drive.google.com/file/d/1x0MPv31ktPOp6ZOjL1nwCwFEDfwFrpoi/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Resume
               </a>
             </Button>
@@ -68,11 +68,18 @@ export function HeroSection() {
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-border/60 bg-surface/70 transition-transform duration-200 hover:-translate-y-1 hover:shadow-glow"
               >
                 <Image
-                  src={isDark ? social.icon.dark : social.icon.light}
+                  src={social.icon.light}
                   alt={social.icon.alt}
                   width={28}
                   height={28}
-                  className="h-7 w-7"
+                  className="h-7 w-7 dark:hidden"
+                />
+                <Image
+                  src={social.icon.dark}
+                  alt={social.icon.alt}
+                  width={28}
+                  height={28}
+                  className="hidden h-7 w-7 dark:block"
                 />
               </Link>
             ))}
