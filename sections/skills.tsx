@@ -18,7 +18,6 @@ export function SkillsSection() {
       >
         <h2 className="text-4xl font-semibold sm:text-5xl">Skills & Certifications</h2>
         <p className="mt-4 text-balance text-lg text-muted-foreground">
-          A blend of applied engineering talents and proof points that back them up.
         </p>
       </motion.div>
       <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -42,7 +41,7 @@ export function SkillsSection() {
                   {skill.tools.map((tool) => (
                     <span
                       key={tool}
-                      className="rounded-full border border-border/50 bg-background px-3 py-1 text-xs font-medium uppercase tracking-wide text-foreground/80"
+                      className="rounded-full bg-gradient-to-r from-primary/20 to-accent/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary transition-shadow duration-200 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
                     >
                       {tool}
                     </span>
