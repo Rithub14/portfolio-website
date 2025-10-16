@@ -31,6 +31,13 @@ export const experiences: ExperienceItem[] = [
     description: "Scaled predictive analytics dashboards and optimized experimentation frameworks for growth teams."
   },
   {
+    type: "professional",
+    role: "Software Developer Intern",
+    organization: "Abacus Consulting",
+    duration: "May 2021 – Jul 2021",
+    description: "Developed an automated text extraction pipeline, streamlined data integration and reduced manual effort."
+  },
+  {
     type: "academic",
     role: "M.Sc. Artificial Intelligence",
     organization: "Brandenburg University of Technology (BTU Cottbus)",
