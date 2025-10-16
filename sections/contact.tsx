@@ -2,14 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 
 import { socialLinks } from "@/data/socials";
 
 export function ContactSection() {
-  const { resolvedTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
 
   return (
     <section id="contact" className="relative mx-auto max-w-3xl px-6 py-16 text-center text-foreground">
@@ -29,7 +26,6 @@ export function ContactSection() {
         transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
         className="mt-4 text-balance text-lg text-muted-foreground"
       >
-        Let&apos;s build something together.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 24 }}
@@ -47,11 +43,18 @@ export function ContactSection() {
             rel={link.href.startsWith("http") ? "noreferrer" : undefined}
           >
             <Image
-              src={isDark ? link.icon.dark : link.icon.light}
+              src={link.icon.light}
               alt={link.icon.alt}
               width={30}
               height={30}
-              className="h-8 w-8"
+              className="h-8 w-8 dark:hidden"
+            />
+            <Image
+              src={link.icon.dark}
+              alt={link.icon.alt}
+              width={30}
+              height={30}
+              className="hidden h-8 w-8 dark:block"
             />
             <span className="text-base font-medium">{link.name}</span>
           </Link>
