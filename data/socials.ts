@@ -11,7 +11,7 @@ export interface SocialLink {
 export const socialLinks: SocialLink[] = [
   {
     name: "Gmail",
-    href: "mailto:hello@rizwanaslam.dev",
+    href: "mailto:rizwanaslam.work@gmail.com",
     icon: {
       light: "/assets/gmail-1.png",
       dark: "/assets/gmail-2.png",
@@ -20,7 +20,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/rizwanaslam",
+    href: "https://www.linkedin.com/in/rizwan-aslam-cs/",
     icon: {
       light: "/assets/linkedin-1.png",
       dark: "/assets/linkedin-2.png",
@@ -29,7 +29,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: "GitHub",
-    href: "https://github.com/rizwan-aslam",
+    href: "https://github.com/Rithub14",
     icon: {
       light: "/assets/github-1.png",
       dark: "/assets/github-2.png",
