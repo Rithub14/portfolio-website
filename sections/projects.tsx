@@ -26,7 +26,6 @@ export function ProjectsSection() {
       >
         <h2 className="text-4xl font-semibold sm:text-5xl">Projects</h2>
         <p className="mt-4 text-balance text-lg text-muted-foreground">
-          Selected builds that highlight product sense, technical rigor, and love for delightful UX.
         </p>
       </motion.div>
       <div className="mt-10 grid gap-8 md:grid-cols-2">
