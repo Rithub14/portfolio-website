@@ -6,23 +6,23 @@ export interface SkillItem {
 
 export const skills: SkillItem[] = [
   {
-    title: "Machine Learning",
-    description: "Deploying production-ready ML systems with monitoring and retraining loops.",
-    tools: ["TensorFlow", "PyTorch", "Weights & Biases", "MLflow"]
+    title: "Machine Learning & Data Science",
+    description: "Core ML engineering, data processing and model development.",
+    tools: ["Python", "NumPy", "Pandas", "Scikit-learn", "Matplotlib", "PyTorch", "TensorFlow", "HuggingFace", "OpenCV", "MLflow", "Weights & Biases"]
   },
   {
-    title: "Generative AI",
-    description: "Architecting LLM applications, retrieval pipelines, and evaluation harnesses.",
-    tools: ["OpenAI", "LangChain", "Semantic Kernel", "Vector Databases"]
+    title: "Generative AI & LLM Engineering",
+    description: "Large Language Models, RAG and generative pipelines.",
+    tools: ["OpenAI", "Retrieval-Augmented Generation (RAG)", "Agentic AI", "LangChain", "LangGraph", "Vector Databases"]
   },
   {
-    title: "Full-Stack Engineering",
-    description: "Crafting responsive interfaces and resilient APIs with modern tooling.",
-    tools: ["Next.js", "TypeScript", "Node.js", "GraphQL"]
+    title: "Cloud, DevOps & MLOps",
+    description: "Scalable deployment, automation and infrastructure.",
+    tools: ["AWS (SageMaker, Bedrock, S3)", "Docker", "Kubernetes", "GitHub Actions", "CI/CD pipelines"]
   },
   {
-    title: "Cloud & DevOps",
-    description: "Automating infrastructure with IaC, CI/CD, and secure deployments.",
-    tools: ["AWS", "Terraform", "Docker", "GitHub Actions"]
+    title: "Full-Stack & Development Tools",
+    description: "API development, frontend integration and tooling.",
+    tools: ["FastAPI", "Streamlit", "SQL", "Redis", "Pytest", "Pydantic", "Poetry", "Git", "VS Code", "Jupyter"]
   }
 ];
