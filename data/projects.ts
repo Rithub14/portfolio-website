@@ -8,28 +8,29 @@ export interface ProjectItem {
 
 export const projects: ProjectItem[] = [
   {
-    title: "Autonomous QA Copilot",
-    description: "LLM-driven assistant that synthesizes test cases and automates regression triage for web apps.",
-    tech: ["Next.js", "OpenAI", "Playwright", "Redis"],
-    github: "https://github.com/example/autonomous-qa",
-    demo: "https://qa-copilot.example.com"
+    title: "Retrieval Augmented Generation (RAG) App",
+    description: "A document intelligence app to query insights from PDFs, DOCX, CSVs and URLs.",
+    tech: ["OpenAI", "LangChain", "Pinecone", "Streamlit"],
+    github: "https://github.com/Rithub14/RAG",
+    demo: "https://rag-all.streamlit.app/"
   },
   {
-    title: "Realtime Vision Edge",
-    description: "Edge-friendly computer vision pipeline with on-device model updates and streaming analytics dashboard.",
-    tech: ["TensorRT", "Rust", "gRPC", "React"],
-    github: "https://github.com/example/realtime-vision-edge"
+    title: "Comics Generator",
+    description: "A Generative AI app to create an entire comic strip from a short scenario.",
+    tech: ["OpenAI", "Stable Diffusion", "Streamlit"],
+    github: "https://github.com/Rithub14/Comics",
+    demo: "https://comics-ai.onrender.com/"
   },
   {
-    title: "InsightOps",
-    description: "Cloud-native observability toolkit combining metrics, traces, and anomaly detection with AI summaries.",
-    tech: ["Next.js", "AWS", "LangChain", "PostgreSQL"],
-    demo: "https://insightops.example.com"
+    title: "PSL Score Predictor",
+    description: "A data-driven web app to forecast cricket innings outcomes using historical match data.",
+    tech: ["Python", "Scikit-learn", "Streamlit"],
+    github: "http://github.com/Rithub14/PSL-Score-Predictor",
   },
   {
-    title: "Generative Design Studio",
-    description: "Interactive workspace that blends procedural generation with co-creation loops for product teams.",
-    tech: ["Three.js", "TypeScript", "FastAPI", "OpenAI"],
-    github: "https://github.com/example/generative-design-studio"
+    title: "Mango Image Analysis App",
+    description: "A web app to classify different mango varieties based on UAV imagery.",
+    tech: ["PyTorch", "Streamlit", "YOLO"],
+    github: "https://github.com/Rithub14/FYP"
   }
 ];
