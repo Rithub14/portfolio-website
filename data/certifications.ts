@@ -9,42 +9,48 @@ export interface CertificationItem {
 
 export const certifications: CertificationItem[] = [
   {
-    title: "AWS Certified Machine Learning Engineer – Associate",
+    title: "AWS Certified Solutions Architect - Associate",
     provider: "Amazon Web Services",
-    date: "Oct 2025",
-    link: "https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/",
+    date: "Jun 2025",
+    link: "https://drive.google.com/file/d/1-Ema6O0Y41KYU6X3FWuiZu2SLmme0Xc0/view?usp=sharing",
     logo: "/assets/aws.png",
-    description: "Validated ML engineering expertise across the AWS stack with real-world deployment scenarios."
+    description:
+      "Demonstrated ability to design, deploy, and optimize scalable cloud architectures for AI/ML workloads on AWS.",
   },
   {
-    title: "TensorFlow Developer Certificate",
-    provider: "Google",
-    date: "Jun 2024",
-    link: "https://www.tensorflow.org/certificate",
-    logo: "/assets/tensorflow.png",
-    description: "Demonstrated ability to build, train, and deploy deep learning models with TensorFlow."
+    title: "Deep Learning Specialization",
+    provider: "DeepLearning.AI",
+    date: "Oct 2023",
+    link: "https://drive.google.com/file/d/1G8JMgm7ivhzt6MNDch0BPtDmEqLEKVzv/view?usp=sharing",
+    logo: "/assets/aws.png",
+    description:
+      "Mastered foundational and advanced deep learning techniques, including CNNs, RNNs, and sequence modeling.",
   },
   {
-    title: "Azure AI Engineer Associate",
-    provider: "Microsoft",
-    date: "Jan 2024",
-    link: "https://learn.microsoft.com/certifications/azure-ai-engineer/",
-    logo: "/assets/azure.png",
-    description: "Designed responsible AI solutions leveraging Azure OpenAI, Cognitive Services, and ML Ops pipelines."
-  },
-  {
-    title: "Certified Kubeflow Administrator",
-    provider: "The Linux Foundation",
+    title: "Machine Learning Specialization",
+    provider: "DeepLearning.AI",
     date: "Aug 2023",
-    link: "https://www.cncf.io/certification/cka/",
-    logo: "/assets/kubeflow.png",
-    description: "Operationalized ML workflows on Kubernetes with secure, reproducible model deployment practices."
+    link: "https://drive.google.com/file/d/1kl4dSbbAWwA4BWZEkmdm2rYlqZf8wKG4/view?usp=sharing",
+    logo: "/assets/aws.png",
+    description:
+      "Built a solid foundation in supervised, unsupervised, and applied ML systems with real-world case studies.",
   },
   {
-    title: "MLOps Professional Certificate",
-    provider: "Coursera x Google Cloud",
-    date: "Apr 2023",
-    logo: "/assets/google-cloud.png",
-    description: "Built end-to-end model pipelines covering CI/CD, monitoring, and continuous training." 
-  }
+    title: "Python for Data Science and Machine Learning",
+    provider: "Udemy",
+    date: "Jul 2022",
+    link: "https://drive.google.com/file/d/1yN633pWN1KzJehDIc4l7vwBPy6YiaZNm/view?usp=sharing",
+    logo: "/assets/aws.png",
+    description:
+      "Gained practical experience in data analysis, visualization, and model building using Python’s ML ecosystem.",
+  },
+  {
+    title: "Python for Data Structures and Algorithms",
+    provider: "Udemy",
+    date: "Sep 2022",
+    link: "https://drive.google.com/file/d/19BIB6p96vaFsMUNMGBoVFYivhlZzig5B/view?usp=sharing",
+    logo: "/assets/aws.png",
+    description:
+      "Strengthened problem-solving and algorithmic thinking skills essential for efficient AI and ML development.",
+  },
 ];
