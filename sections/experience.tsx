@@ -38,7 +38,6 @@ export function ExperienceSection() {
           transition={{ duration: 0.55, ease: "easeOut", delay: 0.1 }}
           className="max-w-2xl text-balance text-lg text-muted-foreground"
         >
-          A snapshot of the roles and research chapters.
         </motion.p>
         <div className="inline-flex rounded-full border border-border/50 bg-surface/80 p-1 shadow-sm backdrop-blur transition-colors">
           {tabs.map((tab) => {
