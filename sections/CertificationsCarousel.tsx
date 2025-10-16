@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { animate, motion, useMotionValue } from "framer-motion";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
@@ -122,10 +121,6 @@ export function CertificationsCarousel() {
     snapToNearest("next");
   }, [animateTo, cardSpan, constraints.left, scrollBy, snapToNearest, x]);
 
-  const handleDragEnd = useCallback(() => {
-    snapToNearest();
-  }, [snapToNearest]);
-
   useEffect(() => {
     const interval = window.setInterval(() => {
       handleNext();
@@ -174,17 +169,10 @@ export function CertificationsCarousel() {
 
       <div className="relative">
         {gradientOverlay}
-        <div
-          ref={containerRef}
-          className="cursor-grab overflow-hidden px-2 active:cursor-grabbing"
-          style={{ touchAction: "pan-y" }}
-        >
+        <div ref={containerRef} className="overflow-hidden px-2" style={{ touchAction: "pan-y" }}>
           <motion.div
             ref={trackRef}
-            drag="x"
-            dragConstraints={constraints}
             style={{ x }}
-            onDragEnd={handleDragEnd}
             className="flex gap-6"
           >
             {certifications.map((cert, index) => (
@@ -195,25 +183,20 @@ export function CertificationsCarousel() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ ...SPRING, delay: index * 0.05 }}
-                className="w-[250px] shrink-0 rounded-xl border border-border/50 bg-surface/95 p-6 text-foreground shadow-sm transition-shadow duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] sm:w-[280px] md:w-[300px] lg:w-[320px]"
+                className="flex w-[250px] shrink-0 flex-col justify-between rounded-xl border border-border/50 bg-surface/95 p-6 text-foreground shadow-sm transition-shadow duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] sm:w-[280px] md:w-[300px] lg:w-[320px]"
               >
-                <div className="flex items-center gap-3">
-                  {cert.logo ? (
-                    <div className="relative h-9 w-9 overflow-hidden rounded-full border border-border/60 bg-background/80">
-                      <Image src={cert.logo} alt={`${cert.provider} logo`} fill className="object-contain p-1.5" />
-                    </div>
-                  ) : null}
-                  <div>
+                <div>
+                  <div className="flex flex-col gap-1">
                     <p className="text-sm font-semibold uppercase tracking-wider text-primary">
                       {cert.provider}
                     </p>
                     <p className="text-xs text-muted-foreground">{cert.date}</p>
                   </div>
+                  <h4 className="mt-5 text-lg font-semibold leading-tight">{cert.title}</h4>
+                  {cert.description ? (
+                    <p className="mt-3 text-sm text-muted-foreground">{cert.description}</p>
+                  ) : null}
                 </div>
-                <h4 className="mt-5 text-lg font-semibold leading-tight">{cert.title}</h4>
-                {cert.description ? (
-                  <p className="mt-3 text-sm text-muted-foreground">{cert.description}</p>
-                ) : null}
                 <div className="mt-6 flex items-center justify-between text-sm">
                   <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
                     Verified Credential
