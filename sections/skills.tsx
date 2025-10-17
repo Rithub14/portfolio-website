@@ -8,7 +8,7 @@ import { CertificationsCarousel } from "@/sections/CertificationsCarousel";
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="mx-auto max-w-6xl px-6 py-16 text-foreground">
+    <section id="skills" className="mx-auto max-w-6xl px-6 py-16 text-foreground w-full">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
