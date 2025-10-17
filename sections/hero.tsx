@@ -70,16 +70,16 @@ export function HeroSection() {
                 <Image
                   src={social.icon.light}
                   alt={social.icon.alt}
-                  width={28}
-                  height={28}
-                  className="h-7 w-7 dark:hidden"
+                  width={24}
+                  height={24}
+                  className="h-6 w-6 dark:hidden"
                 />
                 <Image
                   src={social.icon.dark}
                   alt={social.icon.alt}
-                  width={28}
-                  height={28}
-                  className="hidden h-7 w-7 dark:block"
+                  width={24}
+                  height={24}
+                  className="hidden h-6 w-6 dark:block"
                 />
               </Link>
             ))}
