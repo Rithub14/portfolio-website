@@ -93,7 +93,7 @@ export function HeroSection() {
           className="relative mx-auto flex justify-center"
         >
           <Image
-            src="/assets/pic.png"
+            src="/assets/rizwan_pic.png"
             alt="Muhammad Rizwan Aslam"
             width={180}
             height={180}
