@@ -38,7 +38,7 @@ export function ContactSection() {
           <Link
             key={link.name}
             href={link.href}
-            className="flex items-center gap-3 rounded-full border border-border/60 bg-surface/90 px-5 py-2.5 shadow-sm transition-all hover:-translate-y-1 hover:border-primary/60 hover:shadow-glow"
+            className="flex w-full max-w-[240px] items-center gap-3 rounded-full border border-border/60 bg-surface/90 px-5 py-2.5 shadow-sm transition-all hover:-translate-y-1 hover:border-primary/60 hover:shadow-glow"
             target={link.href.startsWith("http") ? "_blank" : undefined}
             rel={link.href.startsWith("http") ? "noreferrer" : undefined}
           >
