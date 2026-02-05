@@ -52,7 +52,7 @@ export function HeroSection() {
           >
             <Button asChild size="lg">
               <a
-                href="https://drive.google.com/file/d/1x0MPv31ktPOp6ZOjL1nwCwFEDfwFrpoi/view?usp=sharing"
+                href="https://drive.google.com/file/d/110Da2X1LCu-XyQNrbSCOpbKfcd4TAc-5/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >
