@@ -18,9 +18,9 @@ export const experiences: ExperienceItem[] = [
   },
   {
     type: "professional",
-    role: "Machine Learning Engineer",
-    organization: "Freelance",
-    duration: "Aug 2023 – Sep 2024",
+    role: "Data Scientist",
+    organization: "Studio Mega Fury",
+    duration: "Aug 2023 – Aug 2024",
     description: "Delivered end-to-end AI and ML solutions for data-driven products and automation."
   },
   {
