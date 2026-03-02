@@ -9,13 +9,22 @@ export interface CertificationItem {
 
 export const certifications: CertificationItem[] = [
   {
+    title: "AWS Certified Machine Learning Engineer - Associate",
+    provider: "Amazon Web Services",
+    date: "Jun 2025",
+    link: "https://drive.google.com/file/d/1wtXqG7ZGo4LNuAxR63c7CS9I1wuyaw82/view?usp=sharing",
+    logo: "/assets/aws.png",
+    description:
+      "Demonstrated ability to design, deploy, and optimize scalable cloud architectures for AI/ML workloads on AWS.",
+  },
+  {
     title: "AWS Certified Solutions Architect - Associate",
     provider: "Amazon Web Services",
     date: "Jun 2025",
     link: "https://drive.google.com/file/d/1-Ema6O0Y41KYU6X3FWuiZu2SLmme0Xc0/view?usp=sharing",
     logo: "/assets/aws.png",
     description:
-      "Demonstrated ability to design, deploy, and optimize scalable cloud architectures for AI/ML workloads on AWS.",
+      "Demonstrated ability to design, deploy, and optimize scalable cloud architectures on AWS.",
   },
   {
     title: "Deep Learning Specialization",
