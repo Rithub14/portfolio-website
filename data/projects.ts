@@ -8,6 +8,13 @@ export interface ProjectItem {
 
 export const projects: ProjectItem[] = [
   {
+  "title": "YouTube Comment Sentiment Analyzer",
+  "description": "End-to-end MLOps pipeline to fetch and analyze multilingual YouTube comment sentiment via a FastAPI backend and Chrome extension, with MLflow model registry and Kubernetes deployment.",
+  "tech": ["HuggingFace", "FastAPI", "MLflow", "Kubernetes", "DVC", "Python"],
+  "github": "https://github.com/Rithub14/yt-sentiment-analysis",
+  "demo": null
+  },
+  {
     title: "Retrieval Augmented Generation (RAG) App",
     description: "A document intelligence app to query insights from PDFs, DOCX, CSVs and URLs.",
     tech: ["OpenAI", "LangChain", "Pinecone", "Streamlit"],
